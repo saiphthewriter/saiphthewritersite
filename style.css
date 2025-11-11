@@ -2,14 +2,14 @@
 .books {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
-  gap: 15px 25px;       /* row gap 15px, column gap 25px */
+  gap: 15px 15px;       /* row gap 15px, column gap 25px */
   justify-items: center;
-  padding: 60px 40px;   /* space around grid edges */
+  padding: 180px 120px;   /* space around grid edges */
 }
 
 .books a img {
   width: 100%;
-  max-width: 280px;     /* adjust for bigger covers */
+  max-width: 400px;     /* adjust for bigger covers */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
