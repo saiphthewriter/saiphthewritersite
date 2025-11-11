@@ -1,0 +1,46 @@
+/* Page setup */
+body {
+  margin: 0;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for the images */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Images: responsive sizing */
+.image-container a img {
+  width: 100%;
+  max-width: 400px; /* never exceed 400px wide */
+  height: auto; /* keeps aspect ratio */
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.image-container a img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile layout: stack vertically */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  .image-container a img {
+    max-width: 90vw; /* fit nicely on mobile screens */
+  }
+}
